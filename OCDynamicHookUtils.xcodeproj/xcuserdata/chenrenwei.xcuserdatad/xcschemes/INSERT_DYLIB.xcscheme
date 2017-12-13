@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "0910"
+   version = "1.3">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9BF1F8341FDF949700B59C34"
+               BuildableName = "INSERT_DYLIB"
+               BlueprintName = "INSERT_DYLIB"
+               ReferencedContainer = "container:OCDynamicHookUtils.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <Testables>
+      </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "9BF1F8341FDF949700B59C34"
+            BuildableName = "INSERT_DYLIB"
+            BlueprintName = "INSERT_DYLIB"
+            ReferencedContainer = "container:OCDynamicHookUtils.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "&#10;echo &quot;mv $(BUILT_PRODUCTS_DIR)/SampleDemo.app/Contents/MacOS/SampleDemo $(BUILT_PRODUCTS_DIR)/SampleDemo.app/Contents/MacOS/SampleDemo.origin&quot;&#10;mv $(BUILT_PRODUCTS_DIR)/SampleDemo.app/Contents/MacOS/SampleDemo $(BUILT_PRODUCTS_DIR)/SampleDemo.app/Contents/MacOS/SampleDemo.origin&#10;echo &quot;mv $(BUILT_PRODUCTS_DIR)/SampleDemo.app/Contents/MacOS/SampleDemo_patched $(BUILT_PRODUCTS_DIR)/SampleDemo.app/Contents/MacOS/SampleDemo&quot;&#10;mv $(BUILT_PRODUCTS_DIR)/SampleDemo.app/Contents/MacOS/SampleDemo_patched $(BUILT_PRODUCTS_DIR)/SampleDemo.app/Contents/MacOS/SampleDemo&#10;">
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "9BF1F8341FDF949700B59C34"
+            BuildableName = "INSERT_DYLIB"
+            BlueprintName = "INSERT_DYLIB"
+            ReferencedContainer = "container:OCDynamicHookUtils.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "--weak"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "$(BUILT_PRODUCTS_DIR)/libInjectDylib.dylib "
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "$(BUILT_PRODUCTS_DIR)/SampleDemo.app/Contents/MacOS/SampleDemo"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "9BF1F8341FDF949700B59C34"
+            BuildableName = "INSERT_DYLIB"
+            BlueprintName = "INSERT_DYLIB"
+            ReferencedContainer = "container:OCDynamicHookUtils.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>
