@@ -17,9 +17,6 @@
     NSString *selName = @"onRevokeMsg:";
     BOOL hook = [OCDynamicHookUtils AddHookInstanceMethodImp:^id(void *args, ...) {
         NSLog(@"防止撤回...");
-//        NSAlert *alert = [[NSAlert alloc]init];
-//        [alert addButtonWithTitle:@"防止撤回"];
-//        [alert setMessageText:@"!---😅---!"];
         return nil;
     } toClassName:className toReplaceSelectorName:selName];
     NSLog(@"Hook !!! 防止撤回 %@\n\n",hook?@"YES":@"NO");
