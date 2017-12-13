@@ -44,3 +44,11 @@ va_end(ap);
 
 ```
 
+
+### 使用方式
+编译 INSERT_DYLIB 生成命令行工具 
+INSERT_DYLIB --weak   xxx.dylib  AAA.app/Contents/MacOS/AAA
+mv AAA.app/Contents/MacOS/AAA => AAA.app/Contents/MacOS/AAA.bak
+mv AAA.app/Contents/MacOS/AAA_patched => AAA.app/Contents/MacOS/AAA
+
+
