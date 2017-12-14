@@ -19,8 +19,8 @@
 		9BF1F8461FDFA91D00B59C34 /* InjectDylib.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BF1F8451FDFA91D00B59C34 /* InjectDylib.h */; };
 		9BF1F8481FDFA91E00B59C34 /* InjectDylib.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF1F8471FDFA91E00B59C34 /* InjectDylib.m */; };
 		9BF1F84D1FDFA92C00B59C34 /* libOCDynamicHookUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BF1F80D1FDF7C5C00B59C34 /* libOCDynamicHookUtils.a */; };
-		9BF1F85B1FDFC49C00B59C34 /* WX_Hooker.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BF1F85A1FDFC49C00B59C34 /* WX_Hooker.h */; };
-		9BF1F85D1FDFC49C00B59C34 /* WX_Hooker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF1F85C1FDFC49C00B59C34 /* WX_Hooker.m */; };
+		9BF1F85B1FDFC49C00B59C34 /* WX_Hook.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BF1F85A1FDFC49C00B59C34 /* WX_Hook.h */; };
+		9BF1F85D1FDFC49C00B59C34 /* WX_Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF1F85C1FDFC49C00B59C34 /* WX_Hook.m */; };
 		9BF1F8611FDFC4A500B59C34 /* libOCDynamicHookUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BF1F80D1FDF7C5C00B59C34 /* libOCDynamicHookUtils.a */; };
 /* End PBXBuildFile section */
 
@@ -81,9 +81,9 @@
 		9BF1F8431FDFA91D00B59C34 /* libInjectDylib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libInjectDylib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BF1F8451FDFA91D00B59C34 /* InjectDylib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InjectDylib.h; sourceTree = "<group>"; };
 		9BF1F8471FDFA91E00B59C34 /* InjectDylib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InjectDylib.m; sourceTree = "<group>"; };
-		9BF1F8581FDFC49C00B59C34 /* libWX_Hooker.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libWX_Hooker.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9BF1F85A1FDFC49C00B59C34 /* WX_Hooker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WX_Hooker.h; sourceTree = "<group>"; };
-		9BF1F85C1FDFC49C00B59C34 /* WX_Hooker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WX_Hooker.m; sourceTree = "<group>"; };
+		9BF1F8581FDFC49C00B59C34 /* libWX_Hook.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libWX_Hook.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BF1F85A1FDFC49C00B59C34 /* WX_Hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WX_Hook.h; sourceTree = "<group>"; };
+		9BF1F85C1FDFC49C00B59C34 /* WX_Hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WX_Hook.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +134,7 @@
 				9BF1F81E1FDF939000B59C34 /* SampleDemo */,
 				9BF1F8441FDFA91D00B59C34 /* InjectDylib */,
 				9BF1F8361FDF949700B59C34 /* INSERT_DYLIB */,
-				9BF1F8591FDFC49C00B59C34 /* WX_Hooker */,
+				9BF1F8591FDFC49C00B59C34 /* WX_Hook */,
 				9BF1F80E1FDF7C5C00B59C34 /* Products */,
 				9BF1F84C1FDFA92C00B59C34 /* Frameworks */,
 			);
@@ -147,7 +147,7 @@
 				9BF1F81D1FDF939000B59C34 /* SampleDemo.app */,
 				9BF1F8351FDF949700B59C34 /* INSERT_DYLIB */,
 				9BF1F8431FDFA91D00B59C34 /* libInjectDylib.dylib */,
-				9BF1F8581FDFC49C00B59C34 /* libWX_Hooker.dylib */,
+				9BF1F8581FDFC49C00B59C34 /* libWX_Hook.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,13 +203,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9BF1F8591FDFC49C00B59C34 /* WX_Hooker */ = {
+		9BF1F8591FDFC49C00B59C34 /* WX_Hook */ = {
 			isa = PBXGroup;
 			children = (
-				9BF1F85A1FDFC49C00B59C34 /* WX_Hooker.h */,
-				9BF1F85C1FDFC49C00B59C34 /* WX_Hooker.m */,
+				9BF1F85A1FDFC49C00B59C34 /* WX_Hook.h */,
+				9BF1F85C1FDFC49C00B59C34 /* WX_Hook.m */,
 			);
-			path = WX_Hooker;
+			path = WX_Hook;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,7 +235,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BF1F85B1FDFC49C00B59C34 /* WX_Hooker.h in Headers */,
+				9BF1F85B1FDFC49C00B59C34 /* WX_Hook.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,9 +313,9 @@
 			productReference = 9BF1F8431FDFA91D00B59C34 /* libInjectDylib.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
-		9BF1F8571FDFC49C00B59C34 /* WX_Hooker */ = {
+		9BF1F8571FDFC49C00B59C34 /* WX_Hook */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9BF1F85E1FDFC49C00B59C34 /* Build configuration list for PBXNativeTarget "WX_Hooker" */;
+			buildConfigurationList = 9BF1F85E1FDFC49C00B59C34 /* Build configuration list for PBXNativeTarget "WX_Hook" */;
 			buildPhases = (
 				9BF1F8541FDFC49C00B59C34 /* Sources */,
 				9BF1F8551FDFC49C00B59C34 /* Frameworks */,
@@ -325,9 +325,9 @@
 			);
 			dependencies = (
 			);
-			name = WX_Hooker;
-			productName = WX_Hooker;
-			productReference = 9BF1F8581FDFC49C00B59C34 /* libWX_Hooker.dylib */;
+			name = WX_Hook;
+			productName = WX_Hook;
+			productReference = 9BF1F8581FDFC49C00B59C34 /* libWX_Hook.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
@@ -378,7 +378,7 @@
 				9BF1F81C1FDF939000B59C34 /* SampleDemo */,
 				9BF1F8341FDF949700B59C34 /* INSERT_DYLIB */,
 				9BF1F8421FDFA91D00B59C34 /* InjectDylib */,
-				9BF1F8571FDFC49C00B59C34 /* WX_Hooker */,
+				9BF1F8571FDFC49C00B59C34 /* WX_Hook */,
 			);
 		};
 /* End PBXProject section */
@@ -435,7 +435,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BF1F85D1FDFC49C00B59C34 /* WX_Hooker.m in Sources */,
+				9BF1F85D1FDFC49C00B59C34 /* WX_Hook.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -738,7 +738,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9BF1F85E1FDFC49C00B59C34 /* Build configuration list for PBXNativeTarget "WX_Hooker" */ = {
+		9BF1F85E1FDFC49C00B59C34 /* Build configuration list for PBXNativeTarget "WX_Hook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9BF1F85F1FDFC49C00B59C34 /* Debug */,
