@@ -400,7 +400,18 @@ int main(int argc, const char *argv[]) {
 
     const char *lc_name = weak_flag? "LC_LOAD_WEAK_DYLIB": "LC_LOAD_DYLIB";
 
+    char *dylib_temp = NULL;
     const char *dylib_path = argv[1];
+    //if dylib path include @rpath or @executable_path skip
+    if (strstr(dylib_path, "@rpath/") != dylib_path && strstr(dylib_path, "@executable_path/") != dylib_path) {
+        const char* key = "@executable_path/";
+        size_t len = strlen(dylib_path)+strlen(key)+1;
+        dylib_temp = (char*)malloc(len);
+        memset(dylib_temp, 0, len);
+        strcat(dylib_temp, key);
+        strcat(dylib_temp, dylib_path);
+        dylib_path = dylib_temp;
+    }
     const char *binary_path = argv[2];
 
     struct stat s;

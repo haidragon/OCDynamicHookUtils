@@ -13,15 +13,15 @@
 #define LL() NSLog(@"%s %d",__FUNCTION__,__LINE__);
 @implementation InjectDylib
 +(void)load{
-    [OCDynamicHookUtils AddHookClassMethodImp:^id(void* op, ...) {
+    [OCDynamicHookUtils AddHookClassMethodImp:^id(id self, ...) {
         NSLog(@"%s %d",__FUNCTION__,__LINE__);
         return @"My Name Is Hook";
     } toClassName:@"InjectedClass" toReplaceSelectorName:@"GetObj"];
 
-    [OCDynamicHookUtils AddHookClassMethodImp:^id(void* op, ...) {
+    [OCDynamicHookUtils AddHookClassMethodImp:^id(id self, ...) {
         LL();
         va_list ap;
-        va_start(ap , op);
+        va_start(ap , self);
         LL();
         void* sender = va_arg(ap, void*);
         LL();
@@ -43,10 +43,10 @@
         return nil;
     } toClassName:@"InjectedClass" toReplaceSelectorName:@"Recv5Argv:selector:line:fileName:pointer:"];
 
-    [OCDynamicHookUtils AddHookInstanceMethodImp:^id(void* op, ...) {
+    [OCDynamicHookUtils AddHookInstanceMethodImp:^id(id self, ...) {
         LL();
         va_list ap;
-        va_start(ap , op);
+        va_start(ap , self);
         LL();
         int _1  = va_arg(ap, int);
         int _2 = va_arg(ap , int);
@@ -61,8 +61,12 @@
         NSLog(@"%s %d",__FUNCTION__,__LINE__);
         [[NSNotificationCenter defaultCenter]postNotificationName:@"updateData" object:string];
         NSLog(@"%s %d",__FUNCTION__,__LINE__);
+        
         return nil;
     } toClassName:@"InjectedClass" toReplaceSelectorName:@"recv5Int:int2:int3:int4:int5:"];
+
+    
+
 
 }
 @end

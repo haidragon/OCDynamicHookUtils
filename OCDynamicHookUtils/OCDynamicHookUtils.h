@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
 
-typedef id (^OCDynamicHookUtilsImpCallback)(void*args,...);
+typedef id (^OCDynamicHookUtilsImpCallback)(id self,...);
 
 @interface OCDynamicHookUtils : NSObject
 

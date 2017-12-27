@@ -61,6 +61,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9BEB4AA81FF3CBDD001FBA11 /* debug.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = debug.sh; sourceTree = "<group>"; };
 		9BF1F80D1FDF7C5C00B59C34 /* libOCDynamicHookUtils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOCDynamicHookUtils.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BF1F8101FDF7C5C00B59C34 /* OCDynamicHookUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCDynamicHookUtils.h; sourceTree = "<group>"; };
 		9BF1F8121FDF7C5C00B59C34 /* OCDynamicHookUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCDynamicHookUtils.m; sourceTree = "<group>"; };
@@ -182,6 +183,7 @@
 		9BF1F8361FDF949700B59C34 /* INSERT_DYLIB */ = {
 			isa = PBXGroup;
 			children = (
+				9BEB4AA81FF3CBDD001FBA11 /* debug.sh */,
 				9BF1F8371FDF949700B59C34 /* main.m */,
 			);
 			path = INSERT_DYLIB;

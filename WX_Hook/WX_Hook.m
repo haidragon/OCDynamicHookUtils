@@ -15,7 +15,7 @@
 +(void)load{
     NSString *className = @"MessageService";
     NSString *selName = @"onRevokeMsg:";
-    BOOL hook = [OCDynamicHookUtils AddHookInstanceMethodImp:^id(void *args, ...) {
+    BOOL hook = [OCDynamicHookUtils AddHookInstanceMethodImp:^id(id self, ...) {
         NSLog(@"防止撤回...");
         return nil;
     } toClassName:className toReplaceSelectorName:selName];
